@@ -8,7 +8,7 @@ Les scientifiques ont été convoqués pour résoudre la situation, mais ils ont
 
 C'est ainsi que les exercices "Les Zombies Bavards" ont vu le jour. Vous allez devoir créer des zombies, leur donner un nom, les faire se présenter et les détruire quand vous n'en avez plus besoin. Mais attention, ces zombies ne sont pas gentils et aiment bien hurler "braaaaaainz" à tout va !
 
-![Zombies](https://media.giphy.com/media/giZ7zH2xAWOvu/giphy.gif)
+![Zombies](https://media.tenor.com/rMz93UqZ72QAAAAC/plants-vs-zombies-zombie-bailarin.gif)
 
 ## Exercices
 
