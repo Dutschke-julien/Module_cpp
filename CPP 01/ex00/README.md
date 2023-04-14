@@ -1,6 +1,6 @@
 # BraiiiiiiinnnzzzZ
 
-![Zombie GIF](https://media.giphy.com/media/8FMWFIK9yJpKxjhIFv/giphy.gif)
+![Zombie GIF](https://phoneky.co.uk/thumbs/screensavers/down/abstract/brain_yuzj8zp7.gif)
 
 ## Introduction
 
