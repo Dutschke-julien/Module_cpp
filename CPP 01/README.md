@@ -8,17 +8,15 @@ Les scientifiques ont été convoqués pour résoudre la situation, mais ils ont
 
 C'est ainsi que les exercices "Les Zombies Bavards" ont vu le jour. Vous allez devoir créer des zombies, leur donner un nom, les faire se présenter et les détruire quand vous n'en avez plus besoin. Mais attention, ces zombies ne sont pas gentils et aiment bien hurler "braaaaaainz" à tout va !
 
-![Zombies](https://media.tenor.com/rMz93UqZ72QAAAAC/plants-vs-zombies-zombie-bailarin.gif)
+![Zombies](https://media.giphy.com/media/vzAf5sGTR0X5YR0rOB/giphy.gif)
 
 ## Exercices
 
 - Exercice 00 : Créer une classe Zombie avec un attribut name et une fonction announce()
 
-![Zombies](https://media.giphy.com/media/3ohze3OwLIVwRJfWJy/giphy.gif)
 
 ## Conclusion
 
 Avec ces exercices, vous allez devenir un véritable expert en gestion de zombies bavards ! N'oubliez pas de toujours garder un œil sur eux, car ils pourraient bien vous surprendre avec leurs braiements incessants.
 
-![Zombies](https://media.giphy.com/media/ZHhTr43XGzPWY/giphy.gif)
-
+![Zombies]([https://media.giphy.com/media/FhPbyzFSuKmly/giphy.gif])
