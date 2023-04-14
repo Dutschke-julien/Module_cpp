@@ -19,4 +19,4 @@ C'est ainsi que les exercices "Les Zombies Bavards" ont vu le jour. Vous allez d
 
 Avec ces exercices, vous allez devenir un véritable expert en gestion de zombies bavards ! N'oubliez pas de toujours garder un œil sur eux, car ils pourraient bien vous surprendre avec leurs braiements incessants.
 
-![Zombies]([https://media.giphy.com/media/FhPbyzFSuKmly/giphy.gif])
+![Zombies](https://media.giphy.com/media/FhPbyzFSuKmly/giphy.gif)
