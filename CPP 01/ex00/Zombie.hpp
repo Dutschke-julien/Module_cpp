@@ -20,13 +20,11 @@ class Zombie {
 
 		~Zombie();
 
-		bool is_on_heap();
-		void set_indic_heap(bool value);
-
 	private:
-		bool heap;
 		std::string name;
 };
+
+void randomChump();
 
 Zombie* newZombie( std::string name );
 

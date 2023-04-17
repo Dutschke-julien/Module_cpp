@@ -1,12 +1,7 @@
 #include "Zombie.hpp"
 
 //Default constructor 
-Zombie::Zombie() : heap(false){}
-
-void Zombie::set_indic_heap(bool value)
-{
-    this->heap = value;
-}
+Zombie::Zombie() {}
 
 bool Zombie::is_on_heap()
 {
@@ -14,15 +9,13 @@ bool Zombie::is_on_heap()
 }
 
 //Constructor with name Arg
-Zombie::Zombie(std::string name) : name(name), heap(false){}
+Zombie::Zombie(std::string name) : name(name){}
 
 
 //Destructor by default
 Zombie::~Zombie()
 {
     std::cout << "Zombie :" << this->name << " is destroyed." << std::endl;
-    if (this->is_on_heap() == true)
-        delete this;
 }
 
 //Brainz_talking
