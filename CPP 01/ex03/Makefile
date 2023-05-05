@@ -3,23 +3,21 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: event <event@student.42.fr>                +#+  +:+       +#+         #
+#    By: jdutschk <jdutschk@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/28 16:31:26 by event             #+#    #+#              #
-#    Updated: 2023/04/13 19:13:07 by event            ###   ########.fr        #
+#    Updated: 2023/05/05 18:41:18 by jdutschk         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = more_what_more_brainz
+NAME = more_brainz
 
 CC = c++ 
 
 CFLAGS = -Wall -Werror -Wextra -std=c++98 -o 
 
-FILES = main.cpp \
+FILES = main.cpp\
 		Weapon.cpp\
-		HumanA.cpp\
-		HUmanB.cpp
 
 
 

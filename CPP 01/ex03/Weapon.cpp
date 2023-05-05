@@ -1,18 +1,21 @@
-#include "Waepon.hpp"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Weapon.cpp                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jdutschk <jdutschk@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/05/05 18:32:39 by jdutschk          #+#    #+#             */
+/*   Updated: 2023/05/05 18:45:34 by jdutschk         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-Weapon::weapon(std::string name)
-{
-	this->type = name;
-}
+#include "Weapon.hpp"
 
-const	std::string& get_Type()
-{
-	const std::string& REF = this->type;
-	return (REF);
-}
+Weapon::Weapon(std::string type): type(type){}
 
+Weapon::~Weapon(){std::cout << "destructeur called for weapon :" + this->type + "\n";}
 
-void	set_type(std::string armement)
-{
-	this->type = armement;
-}
+const std::string& Weapon::getType(){std::string& REF = this->type; return(REF);}
+
+void Weapon::setType(std::string type){ this->type = type;}
