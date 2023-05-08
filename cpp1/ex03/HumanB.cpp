@@ -1,35 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Weapon.hpp                                         :+:      :+:    :+:   */
+/*   HumanB.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jdutschk <jdutschk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/05 18:29:18 by jdutschk          #+#    #+#             */
-/*   Updated: 2023/05/08 12:07:37 by jdutschk         ###   ########.fr       */
+/*   Created: 2023/05/08 11:36:42 by jdutschk          #+#    #+#             */
+/*   Updated: 2023/05/08 15:36:37 by jdutschk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WEAPON_HPP
+#include "HumanB.hpp"
 
-# define WEAPON_HPP
 
-# include <iostream>
-# include <string>
-# define endl "\n"
+HumanB::~HumanB(){}
 
-class Weapon
+HumanB::HumanB(std::string name, Weapon& arme) : name(name), arme(&arme){}
+
+HumanB::HumanB(std::string name) : name(name), arme(nullptr){}
+
+void HumanB::setWeapon(Weapon& arme)
 {
-	public:
-	Weapon();
-	Weapon(std::string type);
-	~Weapon();
+	this->arme = &arme;
+}
 
-	const	std::string& getType();	
-	void	setType (std::string new_type);
-
-	private:
-	std::string type;
-};
-
-#endif
+void HumanB::attack(void){
+std::cout << this->name + " attacks with their " + this->arme->getType() + endl ;
+}

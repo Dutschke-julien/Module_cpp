@@ -6,7 +6,7 @@
 #    By: jdutschk <jdutschk@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/28 16:31:26 by event             #+#    #+#              #
-#    Updated: 2023/05/05 18:41:18 by jdutschk         ###   ########.fr        #
+#    Updated: 2023/05/08 13:44:07 by jdutschk         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,6 +18,8 @@ CFLAGS = -Wall -Werror -Wextra -std=c++98 -o
 
 FILES = main.cpp\
 		Weapon.cpp\
+		HumanA.cpp\
+		HumanB.cpp
 
 
 
