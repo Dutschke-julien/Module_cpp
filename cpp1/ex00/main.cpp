@@ -12,7 +12,7 @@ int main()
     delete zombie2;
 
 	std::cout << "\n";
-    randomChump();
+    randomChump("zombie 3 ");
 
     return 0;
 }

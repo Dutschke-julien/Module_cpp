@@ -6,20 +6,18 @@
 #    By: jdutschk <jdutschk@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/28 16:31:26 by event             #+#    #+#              #
-#    Updated: 2023/05/09 16:38:31 by jdutschk         ###   ########.fr        #
+#    Updated: 2023/05/09 17:18:54 by jdutschk         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = BraiiiiiiinnnzzzZ
+NAME = sed
 
 CC = c++ 
 
 CFLAGS = -Wall -Werror -Wextra -std=c++98 -o 
 
 FILES = main.cpp\
-		Zombie.cpp\
-		newZombie.cpp\
-		randomChump.cpp
+		replace_string.cpp
 
 
 
@@ -40,9 +38,6 @@ clean :
 
 fclean : clean
 		rm -rf $(NAME)
-
-g :
-	./$(NAME)
 
 
 re : fclean all

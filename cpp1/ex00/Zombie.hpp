@@ -7,7 +7,6 @@
 #include <cstdlib>
 
 
-void randomChump();
 
 class Zombie {
     
@@ -20,11 +19,13 @@ class Zombie {
 
 		~Zombie();
 
+		bool is_on_heap();
 	private:
+		bool heap;
 		std::string name;
 };
 
-void randomChump();
+void randomChump(std::string name);
 
 Zombie* newZombie( std::string name );
 
