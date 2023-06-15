@@ -14,7 +14,7 @@ NAME = BraiiiiiiinnnzzzZ
 
 CC = c++ 
 
-CFLAGS = -Wall -Werror -Wextra -std=c++98 -o 
+CXXFLAGS = -Wall -Werror -Wextra -std=c++98 -o 
 
 FILES = main.cpp\
 		Zombie.cpp\
