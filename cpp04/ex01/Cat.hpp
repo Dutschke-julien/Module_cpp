@@ -6,7 +6,7 @@
 /*   By: jdutschk <jdutschk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/03 11:12:08 by jdutschk          #+#    #+#             */
-/*   Updated: 2023/07/06 17:54:57 by jdutschk         ###   ########.fr       */
+/*   Updated: 2023/07/11 14:50:23 by jdutschk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ class Cat : public Animal
 
 	//methode
 	virtual void makeSound() const;
+	void add_idea(std::string idea, unsigned int index);
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: jdutschk <jdutschk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/03 11:11:49 by jdutschk          #+#    #+#             */
-/*   Updated: 2023/07/06 18:03:09 by jdutschk         ###   ########.fr       */
+/*   Updated: 2023/07/11 14:56:57 by jdutschk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,14 +28,14 @@ Cat::Cat(Cat& t)
 {
 	this->type = t.type;
 	this->_brain = new(Brain);
-	_brain = t._brain;
+	*_brain = *t._brain;
 }
 
 Cat& Cat::operator=(Cat &second) 
 {
 	Animal::operator=(second);
 
-	this->_brain = second._brain;
+	*this->_brain = *second._brain;
 
 	return *this;
 }
@@ -43,4 +43,12 @@ Cat& Cat::operator=(Cat &second)
 void Cat::makeSound() const
 {
 	std::cout << "miaouuuuu\n";
+}
+
+void Cat::add_idea(std::string idea, unsigned int index)
+{
+	if (index >= 100 || index < 0)
+		return ;
+	else
+		this->_brain->add(idea, index);		
 }

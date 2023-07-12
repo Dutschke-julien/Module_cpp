@@ -6,7 +6,7 @@
 /*   By: jdutschk <jdutschk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/03 11:00:39 by jdutschk          #+#    #+#             */
-/*   Updated: 2023/07/06 17:55:47 by jdutschk         ###   ########.fr       */
+/*   Updated: 2023/07/11 15:26:48 by jdutschk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,18 +15,29 @@
 int main()
 {
 
-Cat i;
-Cat j;
 
-std::cout << i.getType() << " " << std::endl;
+Dog i;
+Dog j;
 
-i.makeSound();
+Animal *tableau[20];
 
+int index = 0;
 
-j = i;
-
-
-
+	while (index < 20)
+	{
+		if (index < 10)
+			tableau[index] = new(Dog);
+		else 
+			tableau[index] = new(Cat);
+		index++;
+	}
+	index = 0;
+	while (index != 20)
+	{
+		tableau[index]->makeSound();
+		delete tableau[index];
+		index++;
+	}
 return 0;
 
 }

@@ -6,7 +6,7 @@
 /*   By: jdutschk <jdutschk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 15:21:37 by jdutschk          #+#    #+#             */
-/*   Updated: 2023/07/06 18:01:54 by jdutschk         ###   ########.fr       */
+/*   Updated: 2023/07/11 15:04:51 by jdutschk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,4 +35,22 @@ Brain& Brain::operator=(Brain &second)
 	for (int i = 0; i < 100; i++)
 		this->_listOfIdeas[i] = second._listOfIdeas[i];
 	return(*this);
+}
+
+void Brain::add(std::string idea, unsigned int index)
+{
+	this->_listOfIdeas[index] = idea;
+
+	int i = 0;
+
+	while (i < 100)
+	{
+		if (_listOfIdeas[i] == "")
+			i++;
+		else
+		{
+		std::cout << "[" + _listOfIdeas[i] + "]\n";
+		i++;
+		}
+	}
 }
