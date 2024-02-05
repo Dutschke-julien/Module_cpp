@@ -6,7 +6,7 @@
 /*   By: jdutschk <jdutschk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/14 17:31:33 by jdutschk          #+#    #+#             */
-/*   Updated: 2023/07/03 10:37:19 by jdutschk         ###   ########.fr       */
+/*   Updated: 2023/07/03 10:43:44 by jdutschk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 //setup
 
-ClapTrap::ClapTrap() : _hitPoints(10), _energyPoints(10), _attackDamage(0)
+ClapTrap::ClapTrap() : _hitPoints(100), _energyPoints(50), _attackDamage(20)
 {
-    std::cout << "🚧  🚧 Default constructor 🚧  🚧\n";
+    std::cout << "🚧  🚧 Default constructor for ClapTrap 🚧  🚧\n";
 }
 
-ClapTrap::ClapTrap(std::string name) : _name(name), _hitPoints(10), _energyPoints(10), _attackDamage(0)
+ClapTrap::ClapTrap(std::string name) : _name(name), _hitPoints(100), _energyPoints(50), _attackDamage(20)
 {
-    std::cout << "🚧  🚧 Constructor with string_param [" + name + "] 🚧  🚧\n";
+    std::cout << "🚧  🚧 Constructor with string_param [" + name + "] for ClapTrap 🚧  🚧\n";
 }
 
 ClapTrap::ClapTrap(const ClapTrap& toCopy)
@@ -35,7 +35,7 @@ ClapTrap::ClapTrap(const ClapTrap& toCopy)
 
 ClapTrap::~ClapTrap()
 {
-    std::cout << "💣 💣 destructor" << "[" + this->_name + "]\n";
+    std::cout << "💣 💣 destructor" << "[" + this->_name + "] for ClapTrap\n";
 }
 
 //methodes

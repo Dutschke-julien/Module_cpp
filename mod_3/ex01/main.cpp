@@ -6,7 +6,7 @@
 /*   By: jdutschk <jdutschk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/16 13:41:39 by jdutschk          #+#    #+#             */
-/*   Updated: 2023/07/03 16:16:03 by jdutschk         ###   ########.fr       */
+/*   Updated: 2023/06/28 18:25:09 by jdutschk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,10 @@
 int main()
 {
     ClapTrap machine("machine");
-
-    ClapTrap machine2("machine2");
-
-    machine.attack("truc");
     
-    machine.beRepaired(1);
-    machine.takeDamage(10);
-    machine.takeDamage(1);
-    machine.attack("truc");
-    machine.beRepaired(1);
-    
+    ScavTrap machine2;
+
+    machine2.guardGate();
+    machine2.guardGate();
     return (0);
 }

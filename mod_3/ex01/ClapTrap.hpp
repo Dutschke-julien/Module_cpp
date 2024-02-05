@@ -6,7 +6,7 @@
 /*   By: jdutschk <jdutschk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/14 17:04:58 by jdutschk          #+#    #+#             */
-/*   Updated: 2023/07/03 10:37:27 by jdutschk         ###   ########.fr       */
+/*   Updated: 2023/07/03 10:41:28 by jdutschk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 class ClapTrap
 {
     
-    private :
+    protected: 
     
 	//membres
 	std::string _name;
@@ -42,7 +42,9 @@ class ClapTrap
 	
 	//operator
 	void operator=(ClapTrap second) const;
-	
+
 };
+
+#	include "ScavTrap.hpp"
 
 # endif

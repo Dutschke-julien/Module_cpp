@@ -6,7 +6,7 @@
 /*   By: jdutschk <jdutschk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/14 17:04:58 by jdutschk          #+#    #+#             */
-/*   Updated: 2023/07/03 10:37:27 by jdutschk         ###   ########.fr       */
+/*   Updated: 2023/07/03 10:45:00 by jdutschk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,11 @@
 #   include <iostream>
 #   include <string>
 
+
 class ClapTrap
 {
     
-    private :
+    protected: 
     
 	//membres
 	std::string _name;
@@ -39,10 +40,14 @@ class ClapTrap
  	void attack(const std::string& target);
 	void takeDamage(unsigned int amount);
 	void beRepaired(unsigned int amount);
+
+	//operator 
+	void operator=(ClapTrap second) const ;
 	
-	//operator
-	void operator=(ClapTrap second) const;
 	
 };
+
+#	include "ScavTrap.hpp"
+#	include "FragTrap.hpp"
 
 # endif
