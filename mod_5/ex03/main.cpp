@@ -6,7 +6,7 @@
 /*   By: jdutschk <jdutschk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 17:46:14 by jdutschk          #+#    #+#             */
-/*   Updated: 2024/02/12 11:53:12 by jdutschk         ###   ########.fr       */
+/*   Updated: 2024/02/12 15:49:38 by jdutschk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,15 @@
 #include "ShrubberyCreationForm.hpp"
 #include "PresidentialPardonForm.hpp"
 #include "RobotomyRequestForm.hpp"
+#include "Intern.hpp"
 
 int main()
 {
-    RobotomyRequestForm  f1("Kill_Bill");
+    Intern i1;
+    Bureaucrat b1("jean", 1);
     
-    Bureaucrat worker1("worker1", 1);
+    AForm* f1 = i1.makeForm("robotomy request", "kill bill");
+    f1->signForm(b1);
+    f1->execForm(b1);
     
-    f1.signForm(worker1);
-    f1.execForm(worker1);
 }
