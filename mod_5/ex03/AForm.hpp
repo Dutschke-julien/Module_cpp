@@ -3,6 +3,8 @@
 
 #include "Bureaucrat.hpp"
 
+class Bureaucrat;
+
 class AForm {
 
 
@@ -47,9 +49,10 @@ public:
     int getGradeRequiredToSign() const;
     int getGradeRequiredToExecute() const;
 
-    void signForm(Bureaucrat &worker);
+    void beSigned(Bureaucrat &worker);
     virtual void execForm(Bureaucrat &worker) const = 0;
-
+    AForm(const AForm &other);
+    AForm& operator=(const AForm &other);
     // Other member functions and accessors
 };
 

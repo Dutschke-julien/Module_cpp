@@ -42,3 +42,16 @@ AForm* Intern::createPresidentialPardonForm(std::string target) {
 AForm* Intern::createShrubberyCreationForm(std::string target) {
     return new RobotomyRequestForm(target);
 }
+
+Intern &Intern::operator=(Intern &other) {
+    if (this != &other) {
+        for (int i = 0; i < 3; i++) {
+            this->formCreators[i] = other.formCreators[i];
+            this->formNames[i] = other.formNames[i];
+        }
+    }
+    return *this;
+}
+
+Intern::Intern(Intern &other) : Intern(){
+}

@@ -30,3 +30,14 @@ void RobotomyRequestForm::execForm(Bureaucrat &worker) const {
     std::cout << "\033[1;31m" << "Oupsi fail\n\033[0m";
     }
 }
+
+RobotomyRequestForm::RobotomyRequestForm(RobotomyRequestForm &other) : AForm(other._name, other._gradeRequiredToSign, other._gradeRequiredToExecute), _target(other._target) {
+    std::cout << "copy constructor call\n";
+}
+
+RobotomyRequestForm& RobotomyRequestForm::operator=(RobotomyRequestForm &other) {
+    if (this != &other) {
+        this->_isSigned = other._isSigned;
+    }
+    return *this;
+}

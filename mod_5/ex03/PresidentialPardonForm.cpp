@@ -23,3 +23,16 @@ void PresidentialPardonForm::execForm(Bureaucrat &worker)const {
     
     std::cout << "\033[1;32m" << this->_target << " has been pardoned by Zaphod Beeblebrox.\033[0m\n";
 }
+
+PresidentialPardonForm::PresidentialPardonForm(PresidentialPardonForm &other) : AForm(other._name, other._gradeRequiredToSign, other._gradeRequiredToExecute), _target(other._target){
+    // Copy constructor implementation
+    std::cout << "PresidentialPardonForm copy constructor\n";
+}
+
+PresidentialPardonForm& PresidentialPardonForm::operator=(PresidentialPardonForm &other) {
+    // Operator= implementation
+    if (this != &other) {
+        this->_isSigned = other._isSigned;
+    }
+    return *this;
+}

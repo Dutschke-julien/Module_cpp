@@ -6,11 +6,13 @@
 /*   By: jdutschk <jdutschk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 17:46:20 by jdutschk          #+#    #+#             */
-/*   Updated: 2024/02/09 16:54:25 by jdutschk         ###   ########.fr       */
+/*   Updated: 2024/02/12 18:06:13 by jdutschk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+
+
 
 void Bureaucrat::incrementGrade(){
     if (_grade == 1)
@@ -60,10 +62,18 @@ Bureaucrat::Bureaucrat(const Bureaucrat& src) : _name(src._name), _grade(src._gr
     std::cout << "Bureaucrat copy constructor called\n";
 }
 
+Bureaucrat& Bureaucrat::operator=(const Bureaucrat& src){
+    if (this != &src)
+        _grade = src._grade;
+    return *this;
+}
+
+
 Bureaucrat::~Bureaucrat(){ 
     // Destructor implementation
     std::cout << "Bureaucrat destructor called for " << _name << "\n";
 }
+
 
 std::ostream &operator<<(std::ostream &out, const Bureaucrat &bureaucrat){
     out << bureaucrat.getName() << ", bureaucrat grade " << bureaucrat.getGrade() << "\n";

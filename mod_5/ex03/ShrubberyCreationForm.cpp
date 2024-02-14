@@ -51,3 +51,17 @@ void ShrubberyCreationForm::execForm(Bureaucrat &worker) const {
         std::cerr << "Error opening file: " << _target << "_shrubbery" << std::endl;
     }
 }
+
+
+ShrubberyCreationForm::ShrubberyCreationForm(ShrubberyCreationForm &other) : AForm(other._name, other._gradeRequiredToSign, other._gradeRequiredToExecute), _target(other._target) {
+    // Code du constructeur par copie
+    std::cout << "ShrubberyCreationForm copy constructor called" << std::endl;
+}
+
+ShrubberyCreationForm& ShrubberyCreationForm::operator=(ShrubberyCreationForm &other) {
+    // Code de l'opérateur d'affectation
+    if (this != &other) {
+        this->_isSigned = other._isSigned;
+    }
+    return *this;
+}

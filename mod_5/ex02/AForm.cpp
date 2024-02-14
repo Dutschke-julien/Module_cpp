@@ -18,7 +18,7 @@ AForm::~AForm(){
     std::cout << "AFORM destructor called" << std::endl;
 }
 
-void AForm::signForm(Bureaucrat &worker){
+void AForm::beSigned(Bureaucrat &worker){
     if (worker.getGrade() > this->_gradeRequiredToSign)
         throw AForm::GradeTooLowException();
     this->_isSigned = true;
@@ -41,9 +41,23 @@ int AForm::getGradeRequiredToExecute() const {
     return this->_gradeRequiredToExecute;
 }
 
+
+
 std::ostream &operator<<(std::ostream &out, const AForm &form){
     out << "AFORM " << form.getName() << " requires grade " <<
      form.getGradeRequiredToSign() << " to sign and grade " <<
      form.getGradeRequiredToExecute() << " to execute";
     return out;
+}
+
+AForm::AForm(const AForm &other) : _name(other._name), _isSigned(other._isSigned), _gradeRequiredToSign(other._gradeRequiredToSign), _gradeRequiredToExecute(other._gradeRequiredToExecute) {
+    std::cout << "Form copy constructor called" << std::endl;
+}
+
+AForm& AForm::operator=(const AForm &other) {
+    if (this != &other) {
+        this->_isSigned = other._isSigned;
+    }
+    std::cout << "Form assignment operator called" << std::endl;
+    return *this;
 }

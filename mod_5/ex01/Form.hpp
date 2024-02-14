@@ -3,6 +3,8 @@
 
 #include "Bureaucrat.hpp"
 
+class Bureaucrat;
+
 class Form {
 private:
     const std::string _name;
@@ -38,6 +40,7 @@ public:
     Form();
     Form(const std::string &name, const int &gradeRequiredToSign, const int &gradeRequiredToExecute);
     ~Form();
+    Form(const Form &other);
     
     // Accessors
     std::string getName() const;
@@ -45,9 +48,10 @@ public:
     int getGradeRequiredToSign() const;
     int getGradeRequiredToExecute() const;
 
-    void signForm(Bureaucrat &worker);
+    void beSigned(Bureaucrat &worker);
     void execForm(Bureaucrat &worker);
 
+    Form& operator=(const Form &other) ;
     // Other member functions and accessors
 };
 

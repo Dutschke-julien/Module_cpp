@@ -38,6 +38,8 @@ public:
 
 
     AForm();
+    AForm(const AForm &other);
+    AForm& operator=(const AForm &other);
     AForm(const std::string &name, const int &gradeRequiredToSign, const int &gradeRequiredToExecute);
     virtual ~AForm();
     
@@ -47,7 +49,7 @@ public:
     int getGradeRequiredToSign() const;
     int getGradeRequiredToExecute() const;
 
-    void signForm(Bureaucrat &worker);
+    void beSigned(Bureaucrat &worker);
     virtual void execForm(Bureaucrat &worker) const = 0;
 
     // Other member functions and accessors

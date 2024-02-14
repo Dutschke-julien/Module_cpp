@@ -14,11 +14,24 @@ Form::Form() : _name("default"), _isSigned(false), _gradeRequiredToSign(150), _g
     std::cout << "Form default constructor called" << std::endl;
 }
 
+Form::Form(const Form &other) : _name(other._name), _isSigned(other._isSigned), _gradeRequiredToSign(other._gradeRequiredToSign), _gradeRequiredToExecute(other._gradeRequiredToExecute) {
+    std::cout << "Form copy constructor called" << std::endl;
+}
+
 Form::~Form(){
     std::cout << "Form destructor called" << std::endl;
 }
 
-void Form::signForm(Bureaucrat &worker){
+
+Form& Form::operator=(const Form &other) {
+    if (this != &other) {
+        this->_isSigned = other._isSigned;
+    }
+    std::cout << "Form assignment operator called" << std::endl;
+    return *this;
+}
+
+void Form::beSigned(Bureaucrat &worker){
     if (worker.getGrade() > this->_gradeRequiredToSign)
         throw Form::GradeTooLowException();
     this->_isSigned = true;
@@ -55,3 +68,4 @@ std::ostream &operator<<(std::ostream &out, const Form &form){
      form.getGradeRequiredToExecute() << " to execute";
     return out;
 }
+

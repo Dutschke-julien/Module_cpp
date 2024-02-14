@@ -20,7 +20,8 @@ class PresidentialPardonForm : public AForm {
     // ? AForm(const std::string &name, const int &gradeRequiredToSign, const int &gradeRequiredToExecute);
     PresidentialPardonForm();
     PresidentialPardonForm(std::string target);
-    
+    PresidentialPardonForm(PresidentialPardonForm &other);
+    PresidentialPardonForm& operator=(PresidentialPardonForm &other);
     // Destructeur
     virtual ~PresidentialPardonForm();
     

@@ -21,7 +21,8 @@ class ShrubberyCreationForm : public AForm {
     // ? AForm(const std::string &name, const int &gradeRequiredToSign, const int &gradeRequiredToExecute);
     ShrubberyCreationForm();
     ShrubberyCreationForm(std::string target);
-    
+    ShrubberyCreationForm(ShrubberyCreationForm &other);
+    ShrubberyCreationForm& operator=(ShrubberyCreationForm &other);
     // Destructeur
     virtual ~ShrubberyCreationForm();
     
